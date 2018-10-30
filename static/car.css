@@ -1,0 +1,212 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: "Arial", "Sans-serif";
+    font-size: 12px;    
+    background-color: #59cbea;
+}
+
+svg{
+    fill:#e11f1f;
+}
+
+button{
+    background-color: #3D5689;
+    width: 36px;
+    height: 36px;
+    border: solid 1px #3E99A4;
+    border-radius: 13px;
+    padding: 3px;
+    cursor: pointer;
+}
+
+@keyframes move-grad {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+
+.loadGradient{
+    animation: move-grad 6s infinite alternate;
+    background: linear-gradient(to right, #FF0000 40%, #FFFF00 50%, #FF0000 60%);
+    background-size: 200% 100%;
+}
+
+.ico{
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+}
+
+.hide{display: none;}
+
+.car{
+    background-color: #E4FCE2;
+    color: #502B00FF;
+    padding: 120px 0 90px 0;
+    max-width: 900px;
+    margin: 0px auto;
+}
+
+
+/*HEAD*/
+.car > #panelHead{
+    position: fixed;
+    left:0;
+    top:0;
+    right: 0;
+    padding: 16px 16px 6px 16px;
+    background-color: #333B44;
+    color: #e11f1f;
+
+    display: grid;
+    grid-template-columns: 46px auto;
+    /*grid-template-rows: 1fr 1fr 1fr;*/
+    
+    grid-template-areas: 
+    "iD album"
+    "iT track"
+    "load load";
+    /*align-items: center;*/
+    align-items: start;
+    grid-column-gap: 6px;
+    grid-row-gap: 6px;
+}
+
+.car > #panelHead > div{
+    max-height: 66px;
+    overflow: hidden;
+}
+
+
+.car > #panelHead > #icDisk{grid-area: iD;}
+.car > #panelHead > #uiAlbum{grid-area: album;color: #1faae1;}
+.car > #panelHead > #icMusic{grid-area: iT;color: #e11f1f;}
+.car > #panelHead > #uiTrack{grid-area: track;}
+.car > #panelHead > #uiLoad{grid-area: load; height: 3px;}
+
+
+
+
+
+/* Footer */
+
+
+.car > #panelFooter{
+    position: fixed;
+    left:0;
+    bottom:0;
+    right: 0;
+    padding: 16px;
+    background-color: #333B44;
+
+    display: grid;
+    grid-template-columns: 46px auto 70px 36px;
+    align-items: center;
+    grid-column-gap: 6px;
+}
+
+.car > #panelFooter > #clTime{
+    text-align: center;
+    color: #73f079;
+}
+
+.car > #panelFooter > div > #timeLine{
+    -webkit-appearance: none;
+    width: 100%;
+}
+
+.car > #panelFooter > div > #timeLine::-moz-range-thumb {
+    width: 36px;
+    height: 36px;
+    border-radius: 50px;
+    border:solid 6px #F99797;
+    background: #e11f1f;
+    cursor: pointer;
+}
+
+.car > #panelFooter > div > #timeLine::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 3px;
+    background: #ddd;
+    margin-top:-16px;
+}
+.car > #panelFooter > div > #timeLine::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 36px;
+    height: 36px;
+    border-radius: 50px;
+    border:solid 6px #F99797;
+    background: #e11f1f;
+    margin-top: -16px;
+    cursor: pointer;
+}
+
+/*timer window*/
+.car > #timer{
+    position: fixed;
+    right: 26px;
+    top: 26px;
+    padding: 16px;
+    background-color: #10101150;
+    color: #0B95FFFF;
+    z-index: 10;
+    border-radius: 10px;
+    box-shadow: 0px 0px 50px #0B95FFFF;
+    min-width: 60px;
+    text-align:center;
+}
+
+/*Play list*/
+.car > #panelList{
+    min-height: 1000px;
+    padding: 8px 0;
+}
+
+.car > #panelList > div{
+    margin: 16px;
+    padding: 8px 10px;
+    cursor: pointer;
+    border-radius: 12px;
+    background-color: #A9FFB0FF;
+    display: grid;
+    grid-template-columns: 46px auto 36px;
+    align-items: center;
+    grid-column-gap: 6px;
+
+}
+
+/*.car > #panelList > div > div{
+    display: inline-block;
+}
+*/
+
+
+
+/*  MEDIA      height */
+/*@media screen and (min-height: 360px){
+    .car > #panelButton > #btParams{ margin-bottom: 56px;}
+}
+
+@media screen and (min-height: 480px){
+    .car > #panelButton > #btParams{ margin-bottom: 86px;}
+}
+
+
+@media screen and (min-height: 660px){
+    .car > #panelButton > #btParams{ margin-bottom: 160px;}
+}
+*/
+
+/* MEDIA      width */
+@media screen and (min-width: 360px){
+    body{font-size: 120%;}
+}
+
+@media screen and (min-width: 400px){
+    body{font-size: 160%;}
+}
