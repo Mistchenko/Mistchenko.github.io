@@ -1,18 +1,18 @@
 setCurPList({
-    id:'humans_as_gods',
+    id:'humans_as_gods_1',
     name: 'Люди как боги',
     author: 'Сергей Снегов',
-    note:'1 Галактическая разведка <br>2 Вторжение в Персей <br>3 Кольцо обратного времени',
+    note:'1 Галактическая разведка',
     list: function(){
         l=[];
 
-        for(i=0; i<=67; i++){
+        for(i=1; i<=15; i++){
             if (i<10){
-                is='000'+i;
+                is='0'+i;
             }else{
-                is='00'+i;
+                is=''+i;
             }
-            l.push({id:i, name:'Track '+i, src:'https://ia801902.us.archive.org/17/items/bookaudiocom4265_1675289/'+is+'.mp3'})
+            l.push({id:i, name:'Track '+i, src:'https://ia800505.us.archive.org/20/items/oasolnze12_gmail_03_201505/'+is+'.mp3'})
         }
         return l;            
     }()
