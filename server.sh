@@ -1,2 +1,2 @@
 #!/bin/bash
-http-server ./ -p8000 -c1
+python3 -m http.server 8001
