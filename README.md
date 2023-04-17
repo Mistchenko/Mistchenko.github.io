@@ -1,5 +1,9 @@
-# aplay
+## CSS Bulma
 
-HTML5 audio player
+[Документация](https://bulma.io/documentation/overview/start/)
 
-version: 3.0
+---
+## Font Awesome
+
+[Установка на host](https://fontawesome.com/v5/docs/web/setup/host-font-awesome-yourself)
+
